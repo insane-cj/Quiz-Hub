@@ -720,7 +720,8 @@ export default function QuizApp() {
 
             {/* Options */}
             <div style={{display:"flex",flexDirection:"column",gap:8}}>
-              {q.opts.map((opt, displayIdx) => {
+              {[0, 1, 2, 3].map((displayIdx) => {
+                const opt = q.opts[map[displayIdx]];
                 const state = getOptState(displayIdx);
                 const s = optStyle(state);
                 const disabled = submitted;
