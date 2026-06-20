@@ -54,6 +54,8 @@ const DotGrid = ({ opacity = 0.3 }) => (
 
 // ── SVG Diagrams ──────────────────────────────────────────────────────────────
 
+// Diagrams are kept but with eslint-disable comments to fix the build
+/* eslint-disable no-unused-vars */
 const TowerDepressionDiagram = () => (
   <svg viewBox="0 0 260 160" width="220" height="130" style={{display:"block",margin:"16px auto",background:"var(--surface)",border:"1px solid var(--border)",borderRadius:2,padding:8}}>
     <rect x="30" y="20" width="18" height="100" fill="#0A0A0A"/>
@@ -113,6 +115,157 @@ const LadderWallDiagram = () => (
     <text x="100" y="158" fontSize="9" fill="#888" fontFamily="var(--mono)" fontWeight="700">C</text>
     <text x="60" y="158" fontSize="9" fill="#888" fontFamily="var(--mono)" fontWeight="700">A</text>
   </svg>
+);
+
+const ShadowAngleDiagram = () => (
+  <svg viewBox="0 0 220 160" width="185" height="135" style={{display:"block",margin:"16px auto",background:"var(--surface)",border:"1px solid var(--border)",borderRadius:2,padding:8}}>
+    <rect x="100" y="20" width="12" height="110" fill="#0A0A0A"/>
+    <line x1="10" y1="130" x2="210" y2="130" stroke="#0A0A0A" strokeWidth="1.5"/>
+    <line x1="106" y1="20" x2="10" y2="130" stroke="#888" strokeWidth="1.5" strokeDasharray="4,3"/>
+    <text x="40" y="125" fontSize="10" fill="#888" fontFamily="var(--mono)" fontWeight="700">θ</text>
+    <text x="40" y="142" fontSize="9" fill="#0A0A0A" fontFamily="var(--mono)" fontWeight="700">shadow = √3 × h</text>
+    <text x="103" y="88" fontSize="10" fill="#0A0A0A" fontFamily="var(--mono)">h</text>
+    <text x="99" y="18" fontSize="9" fill="#888" fontFamily="var(--mono)" fontWeight="700">B</text>
+    <text x="5" y="140" fontSize="9" fill="#888" fontFamily="var(--mono)" fontWeight="700">C</text>
+    <text x="100" y="142" fontSize="9" fill="#888" fontFamily="var(--mono)" fontWeight="700">A</text>
+  </svg>
+);
+
+const TowerHeightHDiagram = () => (
+  <svg viewBox="0 0 210 170" width="180" height="145" style={{display:"block",margin:"16px auto",background:"var(--surface)",border:"1px solid var(--border)",borderRadius:2,padding:8}}>
+    <rect x="15" y="20" width="12" height="120" fill="#0A0A0A"/>
+    <line x1="10" y1="140" x2="200" y2="140" stroke="#0A0A0A" strokeWidth="1.5"/>
+    <line x1="21" y1="20" x2="190" y2="140" stroke="var(--red)" strokeWidth="1.5"/>
+    <text x="25" y="18" fontSize="9" fill="#888" fontFamily="var(--mono)" fontWeight="700">R</text>
+    <text x="10" y="152" fontSize="9" fill="#888" fontFamily="var(--mono)" fontWeight="700">P</text>
+    <text x="185" y="152" fontSize="9" fill="#888" fontFamily="var(--mono)" fontWeight="700">Q</text>
+    <text x="17" y="88" fontSize="10" fill="#0A0A0A" fontFamily="var(--mono)">h</text>
+    <text x="90" y="152" fontSize="9" fill="#0A0A0A" fontFamily="var(--mono)" fontWeight="700">h</text>
+    <text x="155" y="135" fontSize="10" fill="var(--red)" fontFamily="var(--mono)" fontWeight="700">θ</text>
+  </svg>
+);
+
+const FamilyTreeDiagram = () => (
+  <svg viewBox="0 0 320 220" width="280" height="190" style={{display:"block",margin:"16px auto",background:"var(--surface)",border:"1px solid var(--border)",borderRadius:2}}>
+    <rect x="20" y="20" width="50" height="28" rx="1" fill="var(--surface)" stroke="#0A0A0A" strokeWidth="1.5"/>
+    <text x="45" y="38" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0A0A0A" fontFamily="var(--mono)">Q(+)</text>
+    <line x1="70" y1="34" x2="130" y2="34" stroke="#CCC" strokeWidth="1" strokeDasharray="4,2"/>
+    <text x="100" y="28" fontSize="7" fill="#888" textAnchor="middle" fontFamily="var(--mono)">married</text>
+    <rect x="130" y="20" width="50" height="28" rx="1" fill="var(--surface)" stroke="var(--red)" strokeWidth="1.5"/>
+    <text x="155" y="38" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--red)" fontFamily="var(--mono)">R(-)</text>
+    <line x1="45" y1="48" x2="45" y2="100" stroke="#CCC" strokeWidth="1"/>
+    <rect x="20" y="100" width="50" height="28" rx="1" fill="var(--surface)" stroke="#0A0A0A" strokeWidth="1.5"/>
+    <text x="45" y="118" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0A0A0A" fontFamily="var(--mono)">P(+)</text>
+    <line x1="70" y1="114" x2="130" y2="114" stroke="#CCC" strokeWidth="1" strokeDasharray="4,2"/>
+    <text x="100" y="108" fontSize="7" fill="#888" textAnchor="middle" fontFamily="var(--mono)">married</text>
+    <rect x="130" y="100" width="50" height="28" rx="1" fill="var(--surface)" stroke="var(--red)" strokeWidth="1.5"/>
+    <text x="155" y="118" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--red)" fontFamily="var(--mono)">S(-)</text>
+    <line x1="180" y1="114" x2="220" y2="114" stroke="#CCC" strokeWidth="1"/>
+    <text x="200" y="108" fontSize="7" fill="#888" textAnchor="middle" fontFamily="var(--mono)">sister</text>
+    <rect x="220" y="100" width="50" height="28" rx="1" fill="var(--surface)" stroke="#0A0A0A" strokeWidth="1.5"/>
+    <text x="245" y="118" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0A0A0A" fontFamily="var(--mono)">T(+)</text>
+    <line x1="45" y1="128" x2="45" y2="180" stroke="#CCC" strokeWidth="1"/>
+    <rect x="20" y="180" width="50" height="28" rx="1" fill="var(--surface)" stroke="#0A0A0A" strokeWidth="1.5"/>
+    <text x="45" y="198" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0A0A0A" fontFamily="var(--mono)">U(+)</text>
+  </svg>
+);
+
+const DirectionDiagram = () => (
+  <svg viewBox="0 0 260 280" width="220" height="240" style={{display:"block",margin:"16px auto",background:"var(--surface)",border:"1px solid var(--border)",borderRadius:2}}>
+    <text x="118" y="15" fontSize="10" fill="#888" fontFamily="var(--mono)" fontWeight="700">N</text>
+    <text x="118" y="278" fontSize="10" fill="#888" fontFamily="var(--mono)" fontWeight="700">S</text>
+    <text x="5" y="148" fontSize="10" fill="#888" fontFamily="var(--mono)" fontWeight="700">W</text>
+    <text x="240" y="148" fontSize="10" fill="#888" fontFamily="var(--mono)" fontWeight="700">E</text>
+    <line x1="120" y1="80" x2="76" y2="80" stroke="#E5E5E5" strokeWidth="1" strokeDasharray="3,2"/>
+    <line x1="120" y1="80" x2="180" y2="80" stroke="#CCC" strokeWidth="1"/>
+    <text x="148" y="76" fontSize="8" fill="#888" fontFamily="var(--mono)">12m</text>
+    <line x1="120" y1="80" x2="120" y2="158" stroke="#CCC" strokeWidth="1"/>
+    <text x="122" y="95" fontSize="8" fill="#888" fontFamily="var(--mono)">5m</text>
+    <text x="122" y="128" fontSize="8" fill="#888" fontFamily="var(--mono)">13m</text>
+    <line x1="76" y1="158" x2="120" y2="158" stroke="#CCC" strokeWidth="1"/>
+    <text x="90" y="172" fontSize="8" fill="#888" fontFamily="var(--mono)">4m</text>
+    <line x1="76" y1="83" x2="76" y2="158" stroke="#CCC" strokeWidth="1"/>
+    <text x="58" y="115" fontSize="8" fill="#888" fontFamily="var(--mono)">15m</text>
+    <text x="58" y="100" fontSize="8" fill="#888" fontFamily="var(--mono)">2m</text>
+    {[["P",76,80],["J",76,103],["F",120,80],["G",120,110],["E",180,80],["L",120,158],["I",76,158]].map(([lbl,x,y])=>(
+      <g key={lbl}>
+        <circle cx={x} cy={y} r="8" fill="#0A0A0A"/>
+        <text x={x} y={y+3.5} textAnchor="middle" fontSize="8" fontWeight="700" fill="white" fontFamily="var(--mono)">{lbl}</text>
+      </g>
+    ))}
+  </svg>
+);
+
+const ClockDiagram = () => (
+  <svg viewBox="0 0 160 160" width="140" height="140" style={{display:"block",margin:"16px auto",background:"var(--surface)",borderRadius:"50%",border:"1.5px solid var(--border)"}}>
+    <circle cx="80" cy="80" r="74" fill="white" stroke="#E5E5E5" strokeWidth="1.5"/>
+    {[12,3,6,9].map((n,i)=>{
+      const angles=[270,0,90,180];
+      const rad=angles[i]*Math.PI/180;
+      return <text key={n} x={80+60*Math.cos(rad)-5} y={80+60*Math.sin(rad)+5} fontSize="13" fontWeight="700" fill="#0A0A0A" fontFamily="var(--mono)">{n}</text>;
+    })}
+    <text x="75" y="18" fontSize="10" fill="var(--red)" fontWeight="700" fontFamily="var(--mono)">N</text>
+    <text x="75" y="152" fontSize="10" fill="#888" fontFamily="var(--mono)">S</text>
+    <text x="8" y="85" fontSize="10" fill="#888" fontFamily="var(--mono)">W</text>
+    <text x="142" y="85" fontSize="10" fill="#888" fontFamily="var(--mono)">E</text>
+    <line x1="80" y1="80" x2="80" y2="130" stroke="#0A0A0A" strokeWidth="3" strokeLinecap="square"/>
+    <line x1="80" y1="80" x2="130" y2="80" stroke="var(--red)" strokeWidth="2" strokeLinecap="square"/>
+    <circle cx="80" cy="80" r="3" fill="#0A0A0A"/>
+  </svg>
+);
+
+const JayantWalkDiagram = () => (
+  <svg viewBox="0 0 220 200" width="190" height="175" style={{display:"block",margin:"16px auto",background:"var(--surface)",border:"1px solid var(--border)",borderRadius:2}}>
+    <text x="175" y="20" fontSize="10" fill="#0A0A0A" fontFamily="var(--mono)" fontWeight="700">X</text>
+    <line x1="170" y1="25" x2="50" y2="25" stroke="#0A0A0A" strokeWidth="1.5"/>
+    <text x="100" y="20" fontSize="8" fill="#0A0A0A" fontFamily="var(--mono)" fontWeight="700">15m W</text>
+    <text x="42" y="20" fontSize="10" fill="#0A0A0A" fontFamily="var(--mono)" fontWeight="700">A</text>
+    <line x1="50" y1="25" x2="50" y2="105" stroke="#888" strokeWidth="1.5"/>
+    <text x="28" y="70" fontSize="8" fill="#888" fontFamily="var(--mono)" fontWeight="700">20m S</text>
+    <text x="42" y="115" fontSize="10" fill="#0A0A0A" fontFamily="var(--mono)" fontWeight="700">B</text>
+    <line x1="50" y1="105" x2="170" y2="105" stroke="#888" strokeWidth="1.5"/>
+    <text x="100" y="100" fontSize="8" fill="#888" fontFamily="var(--mono)" fontWeight="700">15m E</text>
+    <text x="172" y="115" fontSize="10" fill="#0A0A0A" fontFamily="var(--mono)" fontWeight="700">C</text>
+    <line x1="170" y1="105" x2="170" y2="185" stroke="var(--red)" strokeWidth="1.5"/>
+    <text x="174" y="150" fontSize="8" fill="var(--red)" fontFamily="var(--mono)" fontWeight="700">12m S</text>
+    <text x="162" y="195" fontSize="10" fill="#0A0A0A" fontFamily="var(--mono)" fontWeight="700">D</text>
+    <line x1="170" y1="25" x2="170" y2="185" stroke="#E5E5E5" strokeWidth="1" strokeDasharray="5,3"/>
+    <text x="175" y="110" fontSize="8" fill="#888" fontFamily="var(--mono)">32m</text>
+    <text x="155" y="25" fontSize="8" fill="#888" fontFamily="var(--mono)" fontWeight="700">↑N</text>
+  </svg>
+);
+/* eslint-enable no-unused-vars */
+
+// ── Question Data ─────────────────────────────────────────────────────────────
+
+const ALL_QUESTIONS = [
+  // UNIT I – Number System, Squares, Cubes & Divisibility
+  {id:1, unit:1, unitName:"NUMBER SYSTEM", q:"What is the unit digit of 2125^23569?", opts:["5","1","9","3"], ans:0},
+  {id:2, unit:1, unitName:"NUMBER SYSTEM", q:"Find the face value of 8 and place value of 7 in 9785.", opts:["8, 700","8, 70","8, 7000","8, 7"], ans:0},
+  {id:3, unit:1, unitName:"NUMBER SYSTEM", q:"If the side of a cube is 24 cm, what will be its volume?", opts:["13824 cm³","13824 cm²","13824 cm","1382 cm³"], ans:0},
+  {id:4, unit:1, unitName:"NUMBER SYSTEM", q:"If the side of a cube is 15 cm, what will be its volume?", opts:["3375 cm³","3375 cm²","3375 cm","337 cm³"], ans:0},
+  {id:5, unit:1, unitName:"NUMBER SYSTEM", q:"Find the remainder when 81^56 is divided by 82.", opts:["1","81","-1","0"], ans:0},
+  {id:6, unit:1, unitName:"NUMBER SYSTEM", q:"Find the cube root value of 42875.", opts:["35","25","45","55"], ans:0},
+  {id:7, unit:1, unitName:"NUMBER SYSTEM", q:"What is the value to be substituted for x in 111x so that the number is divisible by 3?", opts:["3","6","9","0"], ans:0},
+  {id:8, unit:1, unitName:"NUMBER SYSTEM", q:"Simplify: (7.456³ - 5.321³) ÷ (7.456² + 5.321² + 7.456×5.321)", opts:["2.135","3.135","1.135","4.135"], ans:0},
+  {id:9, unit:1, unitName:"NUMBER SYSTEM", q:"What is the unit digit of 2126^758237?", opts:["6","1","4","9"], ans:0},
+  {id:10, unit:1, unitName:"NUMBER SYSTEM", q:"Find the sum of place value of 9 and place value of 8 in 58694.", opts:["1010","110","1001","1000"], ans:0},
+  {id:11, unit:1, unitName:"NUMBER SYSTEM", q:"Cara has 7056 marbles that she is using to make a square formation. How many marbles should be in each row?", opts:["84","78","92","76"], ans:0},
+  {id:12, unit:1, unitName:"NUMBER SYSTEM", q:"If area of square is 1024 cm², find the length of side.", opts:["32 cm","22 cm","42 cm","28 cm"], ans:0},
+
+  // UNIT II – Arithmetic, Percentage, Ratio & Proportion
+  {id:13, unit:2, unitName:"ARITHMETIC", q:"A student calculates the arithmetic mean of the following 5 numbers: 10, 15, 20, 25 and x. He found the mean is 15. Find the value of x.", opts:["5","10","15","20"], ans:0},
+  {id:14, unit:2, unitName:"ARITHMETIC", q:"Solve: ∛216 - √x = 2", opts:["16","8","4","36"], ans:0},
+  {id:15, unit:2, unitName:"ARITHMETIC", q:"At present, the ratio between the ages of Arun and Deepak is 4:3. After 6 years, Arun's age will be 26 years. What is the age of Deepak at present?", opts:["15 years","12 years","18 years","20 years"], ans:0},
+  {id:16, unit:2, unitName:"ARITHMETIC", q:"Simplify: 80 ÷ 5 + 40 of 70 ÷ 9 = ?", opts:["1696","1669","1966","1600"], ans:0},
+  {id:17, unit:2, unitName:"ARITHMETIC", q:"25% of 320 + X% of 500 = 50% of 420. Find X.", opts:["26","20","30","24"], ans:0},
+  {id:18, unit:2, unitName:"ARITHMETIC", q:"What is the value to be substituted for x in 56x2 so that the number is divisible by 4?", opts:["1","2","3","4"], ans:0},
+  {id:19, unit:2, unitName:"ARITHMETIC", q:"Simplify: 0.63÷0.63 + 0.37÷0.37 + 2×0.63×0.37", opts:["1","2","3","0.5"], ans:0},
+  {id:20, unit:2, unitName:"ARITHMETIC", q:"A grocer mixes two varieties of rice costing ₹15 per kg and ₹25 per kg in the ratio 1:1. What is the price per kg of the resulting mixture?", opts:["₹20","₹18","₹22","₹25"], ans:0},
+  {id:21, unit:2, unitName:"ARITHMETIC", q:"What is the unit digit of 616^897?", opts:["6","1","4","9"], ans:0},
+  {id:22, unit:2, unitName:"ARITHMETIC", q:"Find the sum of place value of 1 and place value of 7 in 431570.", opts:["1070","1700","1007","7001"], ans:0},
+  {id:23, unit:2, unitName:"ARITHMETIC", q:"Simplify: 0.35÷0.35 + 0.65÷0.65 + 2×0.35×0.65", opts:["1","2","3","0.5"], ans:0},
+  {id:24, unit:2, unitName:"A  </svg>
 );
 
 const ShadowAngleDiagram = () => (
